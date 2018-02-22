@@ -17,42 +17,43 @@ import SeaCreatures.sCreatures.Title;
  // import files here as needed
  
  
- public class Turtle extends Vertebrates
+ public class Fish extends Vertebrates
  {  // begin class
  	
  	// ********** instance variable **********
 	 
-	 private double shellSize = 0.0;
+	 private boolean swimBladder = true;
  	
  	// ********** constructors ***********
 	 
 	/*****************************************************
-	Purpose: create Turtle  object
+	Purpose: create Fish object
 	Interface: IN:		title t: Title
 						age a : int
 						finCount f: int
 						scales s: boolean
-						shellSize h: double
-						
+						swimBladder b: boolean
 	Returns: none
 	*****************************************************/	 
-		 public Turtle(int a, Title t, int f, boolean s, double h){
+		 public Fish(int a, Title t, int f, boolean s, boolean b){
 			 
 			 super(a, t, f, s);
 			 
-			 shellSize = h;
+			 swimBladder = b;
+
 		 } // end constructor
  	
  	// ********** accessors **********
-	 
+		 
+ 
 	/*****************************************************
-	Purpose: get the shell size
+	Purpose: get the swimBladder status
 	Interface: IN: none
-	Returns: shellSize: double
+	Returns: swimBladder: boolean
 	*****************************************************/  	 
-		public double getShellSize() {
-			return shellSize;
+		public boolean getSwimBladder() {
+			return swimBladder;
 		} // end get id
-
+ 	
  
  }  // end class

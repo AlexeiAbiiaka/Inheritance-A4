@@ -44,9 +44,10 @@ public class sCreaturesClient
     	String delim = "[ :]+";		// delimiter string for splitting input string
     	String tabSpace = "      ";	// six spaces
     	
-    	Title title;
-    	Integer num;
-    	Double dob;
+    	Title title;					// processed info title to be output
+    	Integer num;					// processed info number to be output
+    	Double dob;					// processed info double to be output
+    	Boolean boo;					// processed info boolean to be output
     	
     	ProgramInfo programInfo = new ProgramInfo();
     	
@@ -74,16 +75,26 @@ public class sCreaturesClient
 	// ***** processing *****
 		sCreatures s1 = new sCreatures(40, Title.Fish);
 		title = s1.getTitle();
-		System.out.println("Type of sea creature is " + title);
+		System.out.println("Type of sea creature is " + title + "\n");
 		
 		Vertebrates v1 = new Vertebrates(100, Title.Turtle, 4, true);
 		num = v1.getFinCount();
 		title = v1.getTitle();
-		System.out.println("Vertebrate " + title + " has " + num + " fins");
+		System.out.println("Vertebrate " + title + " has " + num + " fins\n");
 		
 		Turtle t1 = new Turtle(100, Title.Turtle, 4, true, 23.4);
 		dob = t1.getShellSize();
-		System.out.println("Turtles shell size is " + dob + "inches");
+		System.out.println("Turtles shell size is " + dob + "inches\n");
+		
+		Fish f1 = new Fish(100, Title.Fish, 4, true, true);
+		boo = f1.getSwimBladder();
+		title = f1.getTitle();
+		System.out.println("The vertebrate " + title + " has a " + boo + " swim bladder\n");
+		
+		Invertebrates i1 = new Invertebrates(40, Title.StarFish, true);
+		boo = i1.getRegeneration();
+		title = i1.getTitle();
+		System.out.println("The " + title + " has regeneration which is " + boo + "\n");
 	// ***** output *****
 	
 		// all formatted ouput is printed in this section

@@ -19,7 +19,7 @@ public class sCreatures
  {  // begin class
  	
 	 public enum Title{
-		 StarFish, Turtle, Fish, Vertebrates, Invertebrates
+		 StarFish, Turtle, Fish
 	 } // end title enum
 
  	// ********** instance variable **********

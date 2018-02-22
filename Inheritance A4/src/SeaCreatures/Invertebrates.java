@@ -13,46 +13,40 @@ import SeaCreatures.sCreatures.Title;
  * 
  * *************************************************************
  */
- 
- // import files here as needed
- 
- 
- public class Turtle extends Vertebrates
+
+
+public class Invertebrates extends sCreatures
  {  // begin class
  	
  	// ********** instance variable **********
-	 
-	 private double shellSize = 0.0;
+	
+	private boolean regeneration = true;
  	
  	// ********** constructors ***********
-	 
+	
 	/*****************************************************
-	Purpose: create Turtle  object
+	Purpose: create Invertebrates object
 	Interface: IN:		title t: Title
 						age a : int
-						finCount f: int
-						scales s: boolean
-						shellSize h: double
-						
+						regeneration r: boolean
 	Returns: none
 	*****************************************************/	 
-		 public Turtle(int a, Title t, int f, boolean s, double h){
+		 public Invertebrates(int a, Title t, boolean r){
+
+			 super(a, t);
 			 
-			 super(a, t, f, s);
-			 
-			 shellSize = h;
+			 regeneration = r;
 		 } // end constructor
  	
  	// ********** accessors **********
-	 
+ 	
 	/*****************************************************
-	Purpose: get the shell size
+	Purpose: get the regeneration status
 	Interface: IN: none
-	Returns: shellSize: double
+	Returns: regeneration: boolean
 	*****************************************************/  	 
-		public double getShellSize() {
-			return shellSize;
+		public boolean getRegeneration() {
+			return regeneration;
 		} // end get id
-
  
  }  // end class
