@@ -16,7 +16,7 @@ package seaCreaturesClient;
 
 import javax.swing.*;
 
-import SeaCreatures.sCreatures;
+import SeaCreatures.*;
 import SeaCreatures.sCreatures.Title;
 
 import java.text.DecimalFormat;
@@ -45,6 +45,8 @@ public class sCreaturesClient
     	String tabSpace = "      ";	// six spaces
     	
     	Title title;
+    	Integer num;
+    	Double dob;
     	
     	ProgramInfo programInfo = new ProgramInfo();
     	
@@ -58,9 +60,9 @@ public class sCreaturesClient
 	// ***** Print Banner *****
 	
 		System.out.println("**********************************");
-		System.out.println("NAME:        Your Name Here");
+		System.out.println("NAME:        Alexei Abiiaka");
 		System.out.println("Class:       CS30S");
-		System.out.println("Assignment:  Ax Qy");
+		System.out.println("Assignment:  Inheritence");
 		System.out.println("**********************************");
 		
 	// ***** get input *****
@@ -72,8 +74,16 @@ public class sCreaturesClient
 	// ***** processing *****
 		sCreatures s1 = new sCreatures(40, Title.Fish);
 		title = s1.getTitle();
-		System.out.println(title);
+		System.out.println("Type of sea creature is " + title);
 		
+		Vertebrates v1 = new Vertebrates(100, Title.Turtle, 4, true);
+		num = v1.getFinCount();
+		title = v1.getTitle();
+		System.out.println("Vertebrate " + title + " has " + num + " fins");
+		
+		Turtle t1 = new Turtle(100, Title.Turtle, 4, true, 23.4);
+		dob = t1.getShellSize();
+		System.out.println("Turtles shell size is " + dob + "inches");
 	// ***** output *****
 	
 		// all formatted ouput is printed in this section
