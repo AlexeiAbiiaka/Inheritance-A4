@@ -95,6 +95,11 @@ public class sCreaturesClient
 		boo = i1.getRegeneration();
 		title = i1.getTitle();
 		System.out.println("The " + title + " has regeneration which is " + boo + "\n");
+		
+		StarFish r1 = new StarFish(40, Title.StarFish, true, 5);
+		num = r1.getLegCount();
+		title = r1.getTitle();
+		System.out.println("The " + title + " has " + num + " legs\n");
 	// ***** output *****
 	
 		// all formatted ouput is printed in this section
